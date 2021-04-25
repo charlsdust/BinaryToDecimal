@@ -24,5 +24,15 @@ namespace BinaryToDecimal
         {
             InitializeComponent();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            int num = 0;
+            bool tryParse = int.TryParse(textBox1.Text, out num);
+            
+            ButtonLogic buttonLogic = new ButtonLogic();
+            textBox2.Text = buttonLogic.Factorial(num).ToString();
+        }
     }
 }

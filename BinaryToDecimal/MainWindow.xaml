@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BinaryToDecimal"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="MainWindow" Height="500" Width="500">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center">Binary Digits</Label>
+        <TextBox Name="textBox1" TextChanged="TextBox_TextChanged" MaxLength="8" VerticalAlignment="Center" FontSize="30" MaxHeight="50" Grid.Row="1" Grid.ColumnSpan="2"  ></TextBox>
+        <Label Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25">Output in Decimals</Label>
+        <TextBox Name="textBox2" IsEnabled="False" VerticalAlignment="Center" FontSize="30" MaxHeight="50" Grid.Row="3" Grid.ColumnSpan="2"  ></TextBox>
     </Grid>
 </Window>
